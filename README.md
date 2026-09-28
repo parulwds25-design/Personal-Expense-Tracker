@@ -1,36 +1,73 @@
-# Personal-Expense-Tracker
-Python-based Personal Expense Tracker for Experiential Learning
+# Personal Expense Tracker
 
-## Project Description
+A simple Python-based Personal Expense Tracker developed as an Experiential Learning project for Python Programming Lab.
 
-Personal Expense Tracker is a Python-based utility designed to
-help users record, categorize and analyze their daily expenses.
+## Problem Statement
+
+Managing daily expenses manually can make it difficult to keep track of spending and understand where money is being used.
+
+The Personal Expense Tracker provides a simple way to record, view, search and analyze expenses using Python.
 
 ## Objectives
 
-- Record daily expenses
-- Categorize expenses
-- Calculate total expenses
-- Generate monthly reports
-- Visualize expenses using graphs
+- Record daily expenses.
+- Store expense data in a CSV file.
+- View all recorded expenses.
+- Search expenses by category or description.
+- Calculate total expenses.
+- Generate category-wise summaries.
+- Generate monthly summaries.
+- Display expense graphs.
+- Delete unwanted expense records.
+- Practice Python programming concepts.
 
-## Planned Technologies
-
-- Python
-- NumPy
-- Pandas
-- Matplotlib / Seaborn
-
-## Planned Features
+## Features
 
 1. Add Expense
 2. View Expenses
-3. Search/Filter Expenses
-4. Category-wise Summary
+3. Search Expense
+4. Category Summary
 5. Monthly Summary
-6. Graphical Reports
-7. File Storage
+6. Total Expense
+7. Generate Graphs
+8. Delete Expense
+9. CSV File Storage
+10. Input Validation
 
-## Project Status
+## Technologies Used
 
-Initial development phase – Utility Assessment-I.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- CSV File Handling
+- Object-Oriented Programming
+
+## Python Concepts Used
+
+- Variables
+- Input and Output
+- Conditional Statements
+- Loops
+- Functions
+- Classes and Objects
+- Lists and Data Structures
+- File Handling
+- Exception Handling
+- Pandas DataFrame
+- NumPy
+- Matplotlib
+
+## Project Structure
+
+```text
+Personal-Expense-Tracker/
+│
+├── .gitignore
+├── README.md
+├── expenses.csv
+├── main.py
+├── main1.py
+├── requirements.txt
+└── test/
+    └── test_tracker.py
