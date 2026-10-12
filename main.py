@@ -218,7 +218,7 @@ def main() -> None:
         print("7 Total expenses | 8 Delete expense | 9 Exit")
         choice = input("Select (1-9): ").strip()
         if choice == "9":
-            print("Good luck with your assessment!")
+            print("Exiting!")
             break
         action = actions.get(choice)
         if action:
