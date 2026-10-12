@@ -89,8 +89,9 @@ def view_expenses(expenses: list[dict]) -> None:
         return
     print("\nDate        | Category       | Amount     | Description")
     print("-" * 72)
-    for item in sorted(expenses, key=lambda entry: datetime.strptime(entry["date"], DATE_FORMAT)):
-        print(f"{item['date']} | {item['category'][:14]:14} | ₹{item['amount']:9.2f} | {item['description']}")
+    # Keep the displayed row numbers aligned with the in-memory list used by delete_expense().
+    for index, item in enumerate(expenses, start=1):
+        print(f"{index}. {item['date']} | {item['category'][:14]:14} | ₹{item['amount']:9.2f} | {item['description']}")
 
 
 def category_totals(expenses: list[dict]) -> dict[str, float]:
