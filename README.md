@@ -1,73 +1,33 @@
 # Personal Expense Tracker
 
-A simple Python-based Personal Expense Tracker developed as an Experiential Learning project for Python Programming Lab.
+A Python command-line utility for recording and analyzing expenses. Assessment III updates add validated input, persistent CSV records, category and monthly summaries, deletion, total spending, and two generated charts.
 
-## Problem Statement
+## Setup and run
 
-Managing daily expenses manually can make it difficult to keep track of spending and understand where money is being used.
+Use Python 3.10 or later. Install dependencies and start the application:
 
-The Personal Expense Tracker provides a simple way to record, view, search and analyze expenses using Python.
+```bash
+python -m pip install -r requirements.txt
+python main.py
+```
 
-## Objectives
-
-- Record daily expenses.
-- Store expense data in a CSV file.
-- View all recorded expenses.
-- Search expenses by category or description.
-- Calculate total expenses.
-- Generate category-wise summaries.
-- Generate monthly summaries.
-- Display expense graphs.
-- Delete unwanted expense records.
-- Practice Python programming concepts.
+The app reads and writes `expenses.csv` using the existing `Date,Category,Amount,Description` format and `YYYY-MM-DD` dates. It preserves existing records. Choose **6. Generate graphs** to create `charts/category_spending.png` and `charts/monthly_spending.png`; the images open on desktop systems when supported.
 
 ## Features
 
-1. Add Expense
-2. View Expenses
-3. Search Expense
-4. Category Summary
-5. Monthly Summary
-6. Total Expense
-7. Generate Graphs
-8. Delete Expense
-9. CSV File Storage
-10. Input Validation
+- Add, view, search, and delete expenses.
+- Summarize totals by category and month, and show the overall total.
+- Validate dates and positive amounts.
+- Save records across runs in CSV format.
+- Generate a category bar chart and a monthly spending trend chart with Matplotlib.
 
-## Technologies Used
+## Program logic
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- CSV File Handling
-- Object-Oriented Programming
+`main()` routes menu choices to small functions. `load_expenses()` and `save_expenses()` handle CSV data, summary functions aggregate it, and `generate_graph()` saves both charts as PNG images.
 
-## Python Concepts Used
+## Assessment III demo
 
-- Variables
-- Input and Output
-- Conditional Statements
-- Loops
-- Functions
-- Classes and Objects
-- Lists and Data Structures
-- File Handling
-- Exception Handling
-- Pandas DataFrame
-- NumPy
-- Matplotlib
-
-## Project Structure
-
-```text
-Personal-Expense-Tracker/
-│
-├── .gitignore
-├── README.md
-├── expenses.csv
-├── main.py
-├── main1.py
-├── requirements.txt
-└── test/
-    └── test_tracker.py
+1. Add sample expenses across at least two categories and two months.
+2. Demonstrate the summaries and select option 6 to show both charts.
+3. Restart the program to show that records persist.
+4. Commit the final code and submit the consolidated report PDF required by the course handout.
